@@ -46,14 +46,10 @@ const closeOther = () => {
   });
 };
 
-// TODO : Implement close based on simular URL domains
-const closeDomain = () => {
-  return null;
-};
-
-// TODO : Implement close on active tab
 const closeTab = () => {
-  return null;
+  const tabs = getActiveWindowTabs(function(tabs, activeTab) {
+    chrome.tabs.remove(activeTab.id);
+  });
 };
 
 chrome.contextMenus.onClicked.addListener(function(item, tab) {
