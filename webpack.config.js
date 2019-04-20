@@ -28,9 +28,6 @@ module.exports = {
         from: "*",
         context: "src/icons",
         to: "icons"
-      },
-      {
-        from: "node_modules/webextension-polyfill/dist/browser-polyfill.min.js"
       }
     ])
   ],
