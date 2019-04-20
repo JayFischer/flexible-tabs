@@ -3,7 +3,6 @@ chrome.runtime.onInstalled.addListener(function() {
   const flexTabsChildren = [
     { title: "Close Tabs to the Right", id: "right" },
     { title: "Close Tabs to the Left", id: "left" },
-    { title: "Close Tabs like Domain", id: "domain" },
     { title: "Close Other Tabs", id: "other" },
     { title: "Close Tab", id: "tab" }
   ];
@@ -65,9 +64,6 @@ chrome.contextMenus.onClicked.addListener(function(item, tab) {
       break;
     case "tab":
       closeTab();
-      break;
-    case "domain":
-      closeDomain();
       break;
     default:
       return null;
